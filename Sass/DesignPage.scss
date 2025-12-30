@@ -65,10 +65,12 @@ a{
 .navigation-left-list-container{
     width: fit-content;
     height: fit-content;
+
 }
 .navigation-left-ul{
     display: flex;
     gap: 30px;
+    place-items: center;;
 }
 .navigation-left-ul-li-anchor{
     text-decoration: none;
@@ -90,22 +92,86 @@ a{
     width: fit-content;
     height: fit-content;
     place-items: center;
+    position: relative;
+    font-family: sans-serif;
 }
+#DropDown-Icon{
+    height: 15px;
+    transition: all 0.15s ease-in-out;
+}
+
 .navigation-left-select-container{
-    border: none;
-    background: transparent;
-    font-size: 18px;
-    margin-top: 3px;
-    font-weight: 500;
-    color: $primary-light;
+    place-items: center;
+}
+.navigation-left-select-box{
+    display: none; /* hidden by default */
+    position: absolute;
+    background: #000000;
+    padding: 1em;
+    border: 1px solid $primary-light;
+    top: 60px;
+    z-index: 99;
+    width: 900px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
 
 }
-#navigation-left-select-container-option{
-    background-color: $primary-dark;
-    border: 1px solid $primary-light;
-    color: $primary-light;
-    border-radius: 5px;
+.navigation-left-select-container-option-cat{
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.15s ease-in-out;
+    font-size: 18px;
+    place-items: center;
 }
+.navigation-left-select-container-option-cat:hover #DropDown-Icon{
+    transform: rotate(180deg);
+    transition: all 0.15s ease-in-out;
+}
+.navigation-left-select-container-option{
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 5px;
+    transition: all 0.15s ease-in-out;
+    
+}
+.navigation-left-select-container-option:hover{
+    cursor: pointer;
+
+}
+#graphic-card{
+    height: 30px;
+    
+}
+#navigation-left-select-container-option-Graphics{
+    place-items: center;
+    gap: 50px;
+}
+
+// Define your color palette
+$option-colors: $primary-blue, $primary-light, $primary-pink, $primary-yellow, $primary-orange, $primary-red,$primary-blue, $primary-light;
+
+.navigation-left-select-box {
+  .navigation-left-select-container-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 2px solid transparent; // default invisible border
+    place-items: center;
+
+    // Loop through each option and assign hover border color
+    @for $i from 1 through length($option-colors) {
+      &:nth-child(#{$i}):hover {
+        transition: all 0.15s ease-in-out;
+        border-color: nth($option-colors, $i);
+        color: $primary-light; // optional text color change
+      }
+    }
+  }
+}
+
+
+
 // form
 .navigation-left-search-container-form{
     width: fit-content;
@@ -124,7 +190,6 @@ a{
     border: 1px solid $primary-light;
 }
 .navigation-left-search-container-form-input::placeholder{
-    color: $primary-light;
     font-family: 'poppins';
     font-size: 16px;
 }
