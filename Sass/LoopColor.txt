@@ -1,0 +1,20 @@
+// Define your color palette
+$option-colors: $primary-blue, $primary-light, $primary-pink, $primary-yellow, $primary-orange, $primary-red,$primary-blue, $primary-light;
+
+.navigation-left-select-box {
+  .navigation-left-select-container-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    border: 2px solid transparent; // default invisible border
+    place-items: center;
+
+    // Loop through each option and assign hover border color
+    @for $i from 1 through length($option-colors) {
+      &:nth-child(#{$i}):hover {
+        transition: all 0.15s ease-in-out;
+        border-color: nth($option-colors, $i);
+        color: $primary-light; // optional text color change
+      }
+    }
+  }
+}

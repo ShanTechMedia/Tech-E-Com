@@ -4,6 +4,7 @@ $primary-light:#fff;
 $primary-blue: rgb(0, 110, 255);
 $primary-pink: rgb(255, 0, 149);
 $primary-yellow: rgb(255, 238, 0);
+$primary-gray: rgb(163, 163, 163);
 $primary-orange: rgb(255, 123, 0);
 $primary-red: red;
 
@@ -23,6 +24,8 @@ body{
     height: 100%;
     font-family: 'poppins';
 }
+
+
 ul{
     list-style: none;
 }
@@ -95,49 +98,59 @@ a{
     position: relative;
     font-family: sans-serif;
 }
-#DropDown-Icon{
-    height: 15px;
-    transition: all 0.15s ease-in-out;
-}
+
 
 .navigation-left-select-container{
     place-items: center;
+    
 }
+
 .navigation-left-select-box{
-    display: none; /* hidden by default */
+     /* hidden by default */
+    display: none;
     position: absolute;
     background: #000000;
-    padding: 1em;
-    border: 1px solid $primary-light;
+    border: 1px solid $primary-gray;
     top: 60px;
     z-index: 99;
-    width: 900px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    border-radius: 5px;
+    width: 200PX;
     gap: 20px;
 
 }
+
 .navigation-left-select-container-option-cat{
     cursor: pointer;
     font-weight: 500;
-    transition: all 0.15s ease-in-out;
     font-size: 18px;
+    display: flex;
+    gap: 10px;
     place-items: center;
+    
+    
 }
-.navigation-left-select-container-option-cat:hover #DropDown-Icon{
+.navigation-left-select-container-option-cat:hover ,.navigation-left-select-container-option-cat:hover #DropDown-Icon{
+    background: linear-gradient(to right, $primary-orange,$primary-pink);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#DropDown-Icon.rotate { 
     transform: rotate(180deg);
-    transition: all 0.15s ease-in-out;
 }
 .navigation-left-select-container-option{
     margin-top: 20px;
     font-weight: 500;
     font-size: 18px;
+    border-radius: 4px;
     padding: 5px;
     transition: all 0.15s ease-in-out;
     
 }
 .navigation-left-select-container-option:hover{
     cursor: pointer;
+    background: linear-gradient(to right, $primary-orange,$primary-pink);
+    border-radius: 4px;
 
 }
 #graphic-card{
@@ -149,26 +162,6 @@ a{
     gap: 50px;
 }
 
-// Define your color palette
-$option-colors: $primary-blue, $primary-light, $primary-pink, $primary-yellow, $primary-orange, $primary-red,$primary-blue, $primary-light;
-
-.navigation-left-select-box {
-  .navigation-left-select-container-option {
-    padding: 8px 12px;
-    cursor: pointer;
-    border: 2px solid transparent; // default invisible border
-    place-items: center;
-
-    // Loop through each option and assign hover border color
-    @for $i from 1 through length($option-colors) {
-      &:nth-child(#{$i}):hover {
-        transition: all 0.15s ease-in-out;
-        border-color: nth($option-colors, $i);
-        color: $primary-light; // optional text color change
-      }
-    }
-  }
-}
 
 
 
