@@ -4,10 +4,25 @@ $primary-light:#fff;
 $primary-blue: rgb(0, 110, 255);
 $primary-pink: rgb(255, 0, 149);
 $primary-yellow: rgb(255, 238, 0);
-$primary-gray: rgb(163, 163, 163);
+$primary-gray: rgb(211, 211, 211);
 $primary-orange: rgb(255, 123, 0);
+$primary-dark-orange: rgb(255, 94, 0);
 $primary-red: red;
 
+@font-face {
+    font-family: 'Optima';
+    src: url(../Fonts/OPTIMA_B.TTF) format(TTF);
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url(../Fonts/Helvetica-Bold.ttf) format(TTF);
+}
+
+@font-face {
+    font-family: 'Zapfino';
+    src: url(../Fonts/Zapfino.ttf) format(ttf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +37,7 @@ body{
     width: auto;
     scroll-behavior: smooth;
     height: 100%;
+    
     font-family: 'poppins';
 }
 
@@ -37,6 +53,8 @@ a{
 // Navigation
 .navigation-header{
     justify-items: center;
+    // background: linear-gradient(to right, $primary-blue,$primary-pink);
+    background-color: $primary-dark-orange;
 }
 .navigation-left{
     display: flex;
@@ -57,11 +75,12 @@ a{
     text-decoration: none;
 }
 .navigation-logo-container-link-h4{
-    background: linear-gradient(to right, $primary-orange,$primary-pink);
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(to right, $primary-orange,$primary-pink);
+    // -webkit-background-clip: text;
+    // color: transparent;
     padding: 0;
     font-size: 30px;
+    font-family: 'Helvetica';
     margin: 0;
 }
 #txt-white{
@@ -89,9 +108,10 @@ a{
 }
 .navigation-left-ul-li-anchor-h4:hover{
     transition: all 0.15s ease-in-out;
-    background: linear-gradient(to right, $primary-orange,$primary-pink);
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(to right, $primary-orange,$primary-pink);
+    // -webkit-background-clip: text;
+    text-decoration: underline 2px solid;
+    text-underline-offset: 8px;
 }
 
 // Categories
@@ -134,9 +154,9 @@ a{
     
 }
 .navigation-left-select-container-option-cat:hover ,.navigation-left-select-container-option-cat:hover #DropDown-Icon{
-    background: linear-gradient(to right, $primary-orange,$primary-pink);
-    -webkit-background-clip: text;
-    color: transparent;
+    // background: linear-gradient(to right, $primary-orange,$primary-pink);
+    // -webkit-background-clip: text;
+
 }
 #DropDown-Icon.rotate { 
     transform: rotate(180deg);
@@ -151,7 +171,8 @@ a{
 }
 .navigation-left-select-container-option:hover{
     cursor: pointer;
-    background: linear-gradient(to right, $primary-orange,$primary-pink);
+    // background: linear-gradient(to right, $primary-blue,$primary-pink);
+    background-color: $primary-dark-orange;
 
 }
 
@@ -179,6 +200,7 @@ a{
 .navigation-left-search-container-form-input::placeholder{
     font-family: 'poppins';
     font-size: 16px;
+    color: $primary-light;
 }
 .navigation-left-search-container-form-input-btn{
     background-color: $primary-light;
