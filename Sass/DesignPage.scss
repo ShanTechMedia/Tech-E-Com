@@ -40,9 +40,10 @@ a{
 }
 .navigation-left{
     display: flex;
-    gap: 50px;
-    height: 100px;
+    width: 100%;
+    height: 80px;
     justify-content: center;
+    gap: 60px;
     place-items: center;
 }
 
@@ -63,7 +64,10 @@ a{
     font-size: 30px;
     margin: 0;
 }
-
+#txt-white{
+    color: $primary-light;
+    font-size: 30px;
+}
 // list
 .navigation-left-list-container{
     width: fit-content;
@@ -114,7 +118,6 @@ a{
     top: 60px;
     z-index: 99;
     padding: 10px;
-    border-radius: 5px;
     width: 200PX;
     gap: 20px;
 
@@ -142,7 +145,6 @@ a{
     margin-top: 20px;
     font-weight: 500;
     font-size: 18px;
-    border-radius: 4px;
     padding: 5px;
     transition: all 0.15s ease-in-out;
     
@@ -150,17 +152,9 @@ a{
 .navigation-left-select-container-option:hover{
     cursor: pointer;
     background: linear-gradient(to right, $primary-orange,$primary-pink);
-    border-radius: 4px;
 
 }
-#graphic-card{
-    height: 30px;
-    
-}
-#navigation-left-select-container-option-Graphics{
-    place-items: center;
-    gap: 50px;
-}
+
 
 
 
@@ -201,4 +195,118 @@ a{
 }
 .navigation-left-search-container-form-input-btn:hover{
     cursor: pointer;
+}
+
+
+
+// settings none
+.fa-magnifying-glass,.fa-square-poll-vertical,.fa-bars{
+    display: none;
+}
+.fa-magnifying-glass:hover,.fa-square-poll-vertical:hover,.fa-bars:hover,.fa-gear:hover{
+    cursor: pointer;
+    color: $primary-orange;
+}
+.navigation-left-settings-icon{
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+
+// Responsive
+@media screen and (max-width:1200px) {
+    // List of Nav
+    .navigation-left-ul-li-anchor-h4{
+        font-size: 15px;
+    }
+
+    // Cat
+    .navigation-left-select-container-option-cat{
+        font-size: 15px;
+    }
+
+
+    // searchform
+    .navigation-left-search-container-form-input{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 150px;
+    }
+
+    // cat inside
+    .navigation-left-select-container-option{
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 5px;
+    }
+    .navigation-logo-container-link-h4,#txt-white{
+        font-size: 16px;
+    }
+    // logo
+    #logo{
+        width: 150px;
+    }
+    .navigation-left{
+        gap: 40px;
+    }
+}
+
+// tablet
+@media screen and (max-width:930px){
+    // List of Nav
+    .navigation-left-ul-li-anchor-h4{
+        font-size: 13px;
+    }
+
+    // Cat
+    .navigation-left-select-container-option-cat{
+        font-size: 13px;
+    }
+
+
+    .navigation-logo-container-link-h4{
+        font-size: 13px;
+    }
+
+    // searchform
+    .navigation-left-search-container-form-input{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        width: 100px;
+    }
+    .navigation-left-search-container-form-input::placeholder{
+        font-size: 13px;
+    }
+
+    // cat inside
+    .navigation-left-select-container-option{
+        margin-top: 10px;
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    // logo
+    #logo{
+        width: 120px;
+    }
+    .navigation-left{
+        gap: 30px;
+    }
+}
+
+// tablet official
+@media screen and (max-width:768px){
+    .navigation-left-list-container{
+        display: none;
+    }
+    .navigation-left{
+        justify-content: space-around;
+    }
+    .navigation-left-search-container-form-input{
+        display: none;
+    }
+    .fa-magnifying-glass,.fa-square-poll-vertical,.fa-bars{
+        display: contents;
+    }
 }
