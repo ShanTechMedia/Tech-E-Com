@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close when clicking outside the settings box
-  document.addEventListener("click", (e) => {
+  // document.addEventListener("click", (e) => {
     // Only close if the click is NOT inside settings and NOT on the gear
-    if (!settings.contains(e.target) && e.target !== gear) {
-      settings.style.display = "none";
-      blursetting.style.opacity = "100%";
-        navigation_main_header.style.opacity = "100%";
-    }
-  });
+  //   if (!settings.contains(e.target) && e.target !== gear) {
+  //     settings.style.display = "none";
+  //     blursetting.style.opacity = "100%";
+  //       navigation_main_header.style.opacity = "100%";
+  //   }
+  // });
 });
