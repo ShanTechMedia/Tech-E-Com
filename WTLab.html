@@ -11,7 +11,7 @@
     
 
     <!-- Content of Web-page -->
-    <title>WT Lab</title>
+    <title>Striper</title>
 
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
@@ -41,7 +41,7 @@
 
 
     <!-- Web Icon -->
-    <link rel="shortcut icon" class="fav-ico-1" id="fav-ico-1" href="Favicon/fav-ico.png" type="image/x-icon">
+    <link rel="shortcut icon" class="fav-ico-1" id="fav-ico-1" href="Favicon/Striper (1).png" type="image/x-icon">
 
 
     <!-- Stylesheet -->
@@ -60,7 +60,7 @@
                     <div class="navigation-main-header-logo" id="navigation-main-header-logo" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
                         <div class="navigation-logo-container" id="navigation-logo-container" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
                             <a href="WTLab.html" class="navigation-logo-container-link" id="navigation-logo-container-link" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
-                                <h4 class="navigation-logo-container-link-h4" id="navigation-logo-container-link-h4" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab"><!--<img src="Favicon/ico-4.png" alt="Logo" id="logo" width="200px" style="margin-top: 15px;">--> <span id="txt-white"></span>ShanTech</h4>
+                                <h4 class="navigation-logo-container-link-h4" id="navigation-logo-container-link-h4" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab"><!--<img src="Favicon/ico-4.png" alt="Logo" id="logo" width="200px" style="margin-top: 15px;">--> <span id="txt-white"></span>Striper</h4>
                             </a>
                         </div>
                     </div>
@@ -147,9 +147,10 @@
                     <div class="navigation-left-settings" id="navigation-left-settings" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
                         <div class="navigation-left-settings-icon" id="navigation-left-settings-icon" data-navigation="Navigation Header" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-gear" id="fa-gear" aria-label="Open settings"></i>
                             <i class="fa-solid fa-square-poll-vertical"></i>
                             <i class="fa-solid fa-bars"></i>
+                            
                         </div>
                     </div>
                  </div>
@@ -157,14 +158,55 @@
         </nav>
     </div>
 
+    
 
-
-    <!-- Functions -->
-    <script src="JavaScript/ReDirect_Selection_Nav.js"></script>
-    <script src="JavaScript/icon.js"></script>
 
     <!-- Welcome -->
+    <div class="section-welcome" id="section-welcome" data-navigation="Navigation Welcome" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
+        <section class="section-welcome-box" id="section-welcome-box" data-navigation="Navigation Welcome" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">
+            <h4 class="section-welcome-box-text" id="section-welcome-box-text" data-navigation="Navigation Welcome" aria-details="Navigation by WT Lab" aria-describedby="WT Lab">Welcome to the Striper (in Beta)! While all data is validated by WannaTech, functionality & content will continue to evolve. <a href="" class="welcome-anchor">We'd love to hear any feedback</a></h4>
+        </section>
+    </div>
     
+
+
+
+    <!-- Settings for Pc -->
+    <div class="Settings" id="Settings" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+        <div class="Settings-box" id="Settings-box" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+
+            <!-- User Selection - Color theme -->
+            <div class="Settings-color-theme" id="Settings-color-theme" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+                <div class="Settings-color-theme-container" id="Settings-color-theme-container" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+                    <h2 class="Settings-color-theme-container-title" id="Settings-color-theme-container-title" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">User Settings</h2>
+                    <i class="fa-solid fa-xmark" id="xmark"></i>
+                </div>
+
+                <!-- theme form -->
+                 <div class="Settings-color-theme-container-form" id="Settings-color-theme-container-form" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+                    <div class="Settings-theme-title" id="Settings-theme-title" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+                        <h4 class="Settings-theme-title-h4" id="Settings-theme-title-h4" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">Theme</h4>
+                    </div>
+
+                    <div class="Settings-theme-title-dark" id="Settings-theme-title-dark" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+                        <h4 class="Settings-theme-title-dark-h4-select" id="Settings-theme-title-dark-h4-select" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">Select <img src="Favicon/down.png" width="20px" id="DropDown-Icon"></h4>
+                        <div class="settings-show" id="settings-show" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab">
+                           <h4 class="Settings-theme-title-dark-h4" id="Settings-theme-title-dark-h4" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab"><img src="Assets/Icons-Selection/sun.png" height="15px"  alt=""> Light</h4>
+                           <h4 class="Settings-theme-title-dark-h4" id="Settings-theme-title-dark-h4" data-navigation="Settings Container" aria-details="Settings by WT Lab" aria-describedby="WT Lab"><img src="Assets/Icons-Selection/moon.png" height="15px" alt=""> Dark</h4> 
+                        </div>
+                    </div>
+                 </div>
+
+            </div>
+        </div>
+    </div>
+
     
+    <script src="JavaScript/NavGearSelect.js"></script>
+    <script src="JavaScript/icon.js"></script>
+    <script src="JavaScript/ReDirect_Selection_Nav.js"></script>
+
 </body>
 </html>
+
+
