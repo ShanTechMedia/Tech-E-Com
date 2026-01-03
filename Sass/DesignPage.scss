@@ -5,6 +5,7 @@ $primary-blue: rgb(0, 110, 255);
 $primary-pink: rgb(255, 0, 149);
 $primary-yellow: rgb(255, 238, 0);
 $primary-gray: rgb(71, 71, 71);
+$primary-shade-dark: rgb(17, 17, 17);
 $primary-orange: rgb(255, 123, 0);
 $primary-dark-orange: rgb(255, 94, 0);
 $primary-red: red;
@@ -194,8 +195,13 @@ a{
     font-weight: 500;
     font-size: 18px;
     padding: 5px;
+    display: flex;
     transition: all 0.15s ease-in-out;
+    place-items: center;
     
+}
+#navigation-left-select-container-option-motherboard{
+    place-items: center;
 }
 
 .navigation-left-select-container-option:hover{
@@ -309,19 +315,22 @@ a{
     justify-items: center;
     place-items: center;
     display: none;
+
     
 }
 .Settings-box{
     position: absolute;
-    border: 1px solid $primary-gray;
-    background-color: $primary-dark;
+    background-color: $primary-shade-dark;
     width: 600px;
     max-width: 100%;
-    height: 300px;
+    height: fit-content;
     padding: 20px;
     justify-content: center;
     top: 30%;
 
+}
+.Settings-color-theme-container-form{
+    margin-bottom: 1em;
 }
 #Settings-theme-title-dark.open {
   opacity: 1;
@@ -337,7 +346,7 @@ a{
     width: 100%;
     height: 50px;
     font-weight: 300;
-    padding: 1em 0;
+
     place-items: center;
 }
 .Settings-color-theme-container-title{
@@ -355,31 +364,37 @@ a{
 
 //Settings-theme-title-dark-h4
 
-.Settings-theme-title-dark-h4-select{
+.Settings-theme-title-dark-h4-select,.language-settings-title-h4-select{
     display: flex;
     width: 55%;
     padding: 10px 20px;
     justify-content: space-between;
+    cursor: pointer;
+    
     border: 1px solid $primary-gray;
 }
-
+#DropDown-Icon-menu.rotate,#DropDown-Icon-menu-lang.rotate { 
+    transform: rotate(-90deg);
+}
 
 // settings-show
-.settings-show{
+.settings-show,.language-show{
     border: 1px solid $primary-gray;
-    width: 55%;
-    padding: 10px 20px;
+    width: 61.6%;
+    display: none;
+
 }
 
 // Settings-theme-title-dark-h4
-.Settings-theme-title-dark-h4{
-    margin: 10px 0;
+.Settings-theme-title-dark-h4,.language-show-title-h4{
     margin-inline-start: 0em;
     padding-inline-start: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     place-items: center;
     cursor: pointer;
 }
-.Settings-theme-title-dark-h4:hover{
+.Settings-theme-title-dark-h4:hover,.language-show-title-h4:hover{
     background-color: $primary-blue;
     cursor: pointer;
 }
@@ -388,6 +403,22 @@ a{
     cursor: pointer;
     color: $primary-blue;
 }
+
+
+
+
+
+//Language Settings
+
+#Settings-theme-title{
+    margin-top: 2em;
+}
+
+
+
+
+
+
 // Responsive
 @media screen and (max-width:1200px) {
     // List of Nav
@@ -462,13 +493,25 @@ a{
     // cat inside
     .navigation-left-select-container-option{
         margin-top: 10px;
-        font-size: 13px;
+        font-size: 17px;
         padding: 5px;
     }
 
     // logo
     .navigation-left{
         gap: 30px;
+    }
+
+
+
+
+
+    // settings
+    .Settings-box{
+        width: 500px;
+    }
+    .settings-show,.language-show{
+        width: 63%;
     }
 }
 
@@ -488,5 +531,11 @@ a{
     }
     #section-welcome-box-text{
         font-size: 13px;
+    }
+    .Settings-box{
+        width: 300px;
+    }
+    .settings-show,.language-show{
+        width: 68.2%;
     }
 }

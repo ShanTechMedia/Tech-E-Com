@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
   gear.addEventListener('click', (e) => {
     e.stopPropagation();
     settings.style.display = "block";
-    blursetting.style.opacity = "20%";
-    navigation_main_header.style.opacity = "20%";
+    blursetting.style.filter = "blur(30px)";
+    navigation_main_header.style.filter = "blur(30px)";
   });
 
   // Close when clicking the X mark
   xmarkset.addEventListener("click", () => {
     settings.style.display = "none";
-    blursetting.style.opacity = "100%";
-    navigation_main_header.style.opacity = "100%";
+    blursetting.style.filter = "none";
+    navigation_main_header.style.filter = "none";
   });
 
   // Close when clicking outside the settings box

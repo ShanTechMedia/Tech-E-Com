@@ -12,7 +12,6 @@ const blursetting = document.getElementById('section-welcome');
 selected.addEventListener("click", (e) => {
   e.stopPropagation(); // prevent event bubbling
   items.style.display = items.style.display === "block" ? "none" : "block";
-  blursetting.style.opacity = "20%";
 
   
 });
@@ -21,7 +20,6 @@ selected.addEventListener("click", (e) => {
 document.addEventListener("click", (e) => {
   if (!customSelect.contains(e.target)) {
     items.style.display = "none";
-    blursetting.style.opacity = "100%";
   }
 });
 
