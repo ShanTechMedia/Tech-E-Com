@@ -35,8 +35,8 @@ html{
 }
 
 body{
-    background-color: $primary-dark;
-    color: $primary-light;
+    background-color: $primary-light;
+    color: $primary-dark;
     width: auto;
     scroll-behavior: smooth;
     height: 100%;
@@ -53,7 +53,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: $primary-light;
+    color: $primary-dark;
 }
 
 
@@ -99,7 +99,7 @@ a{
 }
 
 #txt-white{
-    color: $primary-light;
+    color: $primary-orange;
     font-size: 30px;
 }
 
@@ -133,7 +133,7 @@ a{
 
 .navigation-left-ul-li-anchor-h4:hover{
     transition: all 0.15s ease-in-out;
-    color: $primary-blue;
+    color: $primary-orange;
 }
 
 
@@ -186,7 +186,7 @@ a{
 }
 
 .navigation-left-select-container-option-cat:hover{
-    color: $primary-blue;
+    color: $primary-orange;
     transition: all 0.15s ease-in-out;
 }
 
@@ -198,16 +198,19 @@ a{
     display: flex;
     transition: all 0.15s ease-in-out;
     place-items: center;
+    color: $primary-light;
     
 }
 #navigation-left-select-container-option-motherboard{
     place-items: center;
 }
-
+#navigation-left-select-container-option{
+    color: $primary-light;
+}
 .navigation-left-select-container-option:hover{
     cursor: pointer;
     // background: linear-gradient(to right, $primary-blue,$primary-pink);
-    background-color: $primary-blue;
+    background-color: $primary-orange;
 
 }
 
@@ -231,14 +234,14 @@ a{
     padding-right: 1em;
     width: 250px;
     background-color: transparent;
-    color: $primary-light;
-    border: 1px solid $primary-light;
+    color: $primary-dark;
+    border: 1px solid $primary-dark;
 }
 
 .navigation-left-search-container-form-input::placeholder{
     font-family: 'poppins';
     font-size: 16px;
-    color: $primary-light;
+    color: $primary-dark;
 }
 
 .navigation-left-search-container-form-input-btn{
@@ -258,7 +261,9 @@ a{
 .navigation-left-search-container-form-input-btn:hover{
     cursor: pointer;
 }
-
+#txt-white-list{
+    color: $primary-light;
+}
 
 
 // settings none
@@ -268,7 +273,7 @@ a{
 
 .fa-magnifying-glass:hover,.fa-square-poll-vertical:hover,.fa-bars:hover,.fa-gear:hover{
     cursor: pointer;
-    color: $primary-blue;
+    color: $primary-orange;
 }
 
 .navigation-left-settings-icon{
@@ -296,9 +301,11 @@ a{
 #section-welcome-box-text{
     font-family: 'Helvetica';
     font-weight: 500;
+    color: $primary-light;
     padding: 10px;
 }
 .welcome-anchor{
+    color: $primary-light;
     text-decoration: underline 1px solid;
     text-underline-offset: 5px;
 }
@@ -327,6 +334,7 @@ a{
     padding: 20px;
     justify-content: center;
     top: 30%;
+    display: block;
 
 }
 .Settings-color-theme-container-form{
@@ -346,11 +354,11 @@ a{
     width: 100%;
     height: 50px;
     font-weight: 300;
-
     place-items: center;
 }
 .Settings-color-theme-container-title{
     font-weight: 400;
+    color: $primary-light;
 }
 
 
@@ -359,6 +367,7 @@ a{
 }
 .Settings-theme-title-h4{
     font-weight: 500;
+    color: $primary-light;
     display: flex;
 }
 
@@ -369,8 +378,8 @@ a{
     width: 55%;
     padding: 10px 20px;
     justify-content: space-between;
+    color: $primary-light;
     cursor: pointer;
-    
     border: 1px solid $primary-gray;
 }
 #DropDown-Icon-menu.rotate,#DropDown-Icon-menu-lang.rotate { 
@@ -386,22 +395,26 @@ a{
 }
 
 // Settings-theme-title-dark-h4
-.Settings-theme-title-dark-h4,.language-show-title-h4{
+#Settings-theme-title-dark-h4,#language-show-title-h4{
     margin-inline-start: 0em;
     padding-inline-start: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     place-items: center;
     cursor: pointer;
+    color: $primary-light;
 }
 .Settings-theme-title-dark-h4:hover,.language-show-title-h4:hover{
-    background-color: $primary-blue;
+    background-color: $primary-orange;
     cursor: pointer;
 }
 // xmark
+#xmark{
+    color: $primary-light;
+}
 #xmark:hover{
     cursor: pointer;
-    color: $primary-blue;
+    color: $primary-orange;
 }
 
 
@@ -413,7 +426,9 @@ a{
 #Settings-theme-title{
     margin-top: 2em;
 }
-
+.language-settings{
+    display: block;
+}
 
 
 
@@ -421,6 +436,11 @@ a{
 .navigation-tablet-mob{
     display: none;
 }
+
+
+
+
+
 
 // Responsive
 @media screen and (max-width:1200px) {
@@ -556,12 +576,14 @@ a{
         justify-content: space-between;
         width: 100%;
         background-color: $primary-dark;
+        color: $primary-light;
     }
     .navigation-tablet-mob-ul-li-anchor{
         position: relative;
+        color: $primary-light;
     }
     .navigation-tablet-mob-ul-li-anchor:hover{
-        text-decoration: underline 1px solid $primary-blue;
+        text-decoration: underline 1px solid $primary-orange;
         text-underline-offset: 10px;
     }
     .navigation-tablet-mob-ul,.closing-icon{
@@ -572,7 +594,7 @@ a{
     }
     #xmark-tab:hover{
         cursor: pointer;
-        color: $primary-blue;
+        color: $primary-orange;
     }
     .navigation-tablet-mob-ul-li{
         margin: 3em 0;
@@ -601,9 +623,10 @@ a{
     }
     .navigation-res-left-select-container-option{
         padding: 1em;
+        color: $primary-light;
         cursor: pointer;
     }
     .navigation-res-left-select-container-option:hover{
-        background-color: $primary-blue;
+        background-color: $primary-orange;
     }
 }

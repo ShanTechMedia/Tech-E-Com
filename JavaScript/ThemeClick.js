@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Open settings
   ThemeClick.addEventListener('click', (e) => {
     e.stopPropagation();
-    settings_theme.style.display = "block";
+    settings_theme.style.display = settings_theme.style.display === "block" ? "none" : "block";
   });
 
   // Close when clicking the X mark
