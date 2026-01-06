@@ -71,7 +71,6 @@ a{
     justify-content: center;
     gap: 60px;
     place-items: center;
-    
 }
 
 #navigation-header.blurred { 
@@ -164,7 +163,7 @@ a{
     top: 60px;
     z-index: 99;
     padding: 10px;
-    width: 200PX;
+    width: 150PX;
     gap: 20px;
     border-radius: 5px;
 
@@ -192,14 +191,18 @@ a{
 
 .navigation-left-select-container-option{
     margin-top: 20px;
-    font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     padding: 5px;
     display: flex;
     transition: all 0.15s ease-in-out;
     place-items: center;
     color: $primary-light;
+
     
+}
+#txt-white-list{
+    font-weight: 100;
+    font-family: 'Helvetica';
 }
 #navigation-left-select-container-option-motherboard{
     place-items: center;
@@ -263,6 +266,7 @@ a{
 }
 #txt-white-list{
     color: $primary-light;
+    
 }
 
 
@@ -442,6 +446,44 @@ a{
 
 
 
+
+// Dark theme
+/* Default light theme */
+body.light-theme {
+  background-color: $primary-light;
+  color: $primary-dark;
+}
+
+/* Dark theme */
+body.dark-theme {
+  background-color: $primary-dark;
+  color: $primary-light;
+}
+body.light-theme .navigation-left-ul-li-anchor {
+  color: $primary-dark; /* dark text for light theme */
+}
+
+body.dark-theme .navigation-left-ul-li-anchor {
+  color: $primary-light; /* light text for dark theme */
+}
+body.light-theme #DropDown-Icon{
+    display: block;
+}
+body.dark-theme #DropDown-Icon-light{
+    display: block;
+}
+
+body.dark-theme .navigation-left-search-container-form-input{
+    border-color: $primary-light;
+}
+body.dark-theme .navigation-left-search-container-form-input::placeholder{
+    color: $primary-light;
+}
+
+#DropDown-Icon-light,#DropDown-Icon{
+    display: none;
+}
+
 // Responsive
 @media screen and (max-width:1200px) {
     // List of Nav
@@ -449,6 +491,10 @@ a{
         font-size: 15px;
     }
 
+    .navigation-logo-container-link-h4{
+        font-size: 15px;
+        
+    }
     #section-welcome-box-text{
         font-size: 15px;
     }
@@ -471,10 +517,6 @@ a{
         font-size: 15px;
         padding: 5px;
     }
-    .navigation-logo-container-link-h4,#txt-white{
-        font-size: 23px;
-        margin-top: -2px;
-    }
 
     .navigation-left{
         gap: 40px;
@@ -488,18 +530,18 @@ a{
 @media screen and (max-width:930px){
     // List of Nav
     .navigation-left-ul-li-anchor-h4{
-        font-size: 13px;
+        font-size: 15px;
     }
 
     // Cat
     .navigation-left-select-container-option-cat{
-        font-size: 13px;
+        font-size: 15px;
     }
 
 
     .navigation-logo-container-link-h4{
-        font-size: 23px;
-        margin-top: -3px;
+        font-size: 15px;
+        margin-top: -8px;
         
     }
 
@@ -510,13 +552,13 @@ a{
         width: 100px;
     }
     .navigation-left-search-container-form-input::placeholder{
-        font-size: 13px;
+        font-size: 15px;
     }
-
+    
     // cat inside
     .navigation-left-select-container-option{
         margin-top: 10px;
-        font-size: 17px;
+        font-size: 15px;
         padding: 5px;
     }
 
